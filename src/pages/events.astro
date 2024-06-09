@@ -1,0 +1,14 @@
+---
+import AllArticles from "@/components/AllArticles";
+import Layout from "../layouts/Layout.astro";
+import { eventData } from "@/data/eventData";
+---
+
+<Layout>
+  <AllArticles
+    data={eventData}
+    title={"Eventos"}
+    imagePath={"/images/eventImages"}
+    client:load
+  />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import AllArticles from "@/components/AllArticles";
+import Layout from "../layouts/Layout.astro";
+import { aboutData } from "@/data/aboutData";
+---
+
+<Layout>
+  <AllArticles
+    data={aboutData}
+    title={"Sobre Nosotros"}
+    imagePath={"/images/aboutImages"}
+    client:load
+  />
+</Layout>

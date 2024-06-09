@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainCarousel from "@/components/MainCarousel";
+import LastEvent from "@/components/LastEvent";
+import AlliedCompanies from "@/components/AlliedCompanies";
+import { alliedCompaniesData } from "@/data/alliedCompanies";
+import { eventData } from "@/data/eventData";
+import { newsData } from "@/data/newsData";
+---
+
+<Layout>
+  <MainCarousel client:load />
+  <LastEvent
+    data={eventData}
+    title={"Últimos Eventos"}
+    imagePath={"images/eventImages/"}
+    route={"/events/"}
+    client:load
+  />
+
+  <LastEvent
+    data={newsData}
+    title={"Últimas Novedades"}
+    imagePath={"images/newsImages/"}
+    route={"/news/"}
+    client:visible
+  />
+
+  <AlliedCompanies
+    data={alliedCompaniesData}
+    imagePath={"images/alliedCompaniesImages"}
+    client:visible
+  />
+</Layout>
