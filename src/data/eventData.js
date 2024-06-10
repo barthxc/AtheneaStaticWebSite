@@ -11,9 +11,10 @@ export const eventData = [
   {
     data: {
       nombre: "Excursión a Málaga",
-      fotos: ["1.png", "carousel2.png", "carousel3.png"],
+      fotos: ["1.jpeg", "2.jpeg", "3.jpeg"],
       fecha: "07/05/2024",
-      descripcion: "Excursión a Málaga",
+      descripcion:
+        "DESCRIPCIÓN data DE HABAS DESCRIPCIÓN data DE HABAS DESCRIPCIÓN data DE HABAS DESCRIPCIÓN data DE HABAS DESCRIPCIÓN data DE HABAS DESCRIPCIÓN data DE HABAS DESCRIPCIÓN data DE HABAS ",
     },
   },
   {

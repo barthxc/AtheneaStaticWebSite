@@ -1,6 +1,8 @@
 ---
 const title = "Athenea";
 import "@/styles/globals.css";
+import Menu from "@/components/Menu";
+import Footer from "@/components/Footer.astro";
 ---
 
 <!doctype html>
@@ -13,32 +15,13 @@ import "@/styles/globals.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="">
-    <header
-      class="flex w-full items-center justify-center px-4 pt-3 md:px-6 md:pt-4">
-      <nav
-        class="flex w-full items-center text-xl justify-around sm:text-3xl md:text-3xl pb-10">
-        <a href="/about/" class="hover:underline">Nosotros</a>
-        <a href="/events/" class="hover:underline">Eventos</a>
-        <div class="hidden md:block">
-          <a href="/">
-            <img
-              src="/public/Logo.webp"
-              width="80"
-              alt="Logo"
-              class="overflow-hidden rounded-lg object-contain object-center"
-            />
-          </a>
-        </div>
-        <a href="/contact/" class="hover:underline">Contacto</a>
-        <a href="#" class="hover:underline">Donar</a>
-      </nav>
-    </header>
+  <body
+    class="inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#3ba6ff_100%)]
+     min-h-screen scroll-smooth">
+    <Menu client:load />
     <main class="w-full flex flex-col items-center justify-center">
       <slot />
     </main>
-    <footer>
-      <!-- FOOTER -->
-    </footer>
+    <Footer />
   </body>
 </html>

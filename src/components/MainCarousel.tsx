@@ -4,15 +4,13 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 export default function MainCarousel() {
   return (
     <>
-      <h1 className="pb-5 text-3xl text-center px-5">
-        Asociación de Discapacitados Athenea Sin Ánimo de Lucro{" "}
+      <h1 className=" text-4xl text-center p-10">
+        Asociación de Discapacitados Athenea Sin Ánimo de Lucro
       </h1>
       <Carousel
         className="w-full"

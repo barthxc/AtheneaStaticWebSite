@@ -7,13 +7,16 @@ import {
 
 export default function AllArticles({ data, title, imagePath }) {
   return (
-    <div className="py-8 px-2">
+    <div className="py-8 px-4 ">
       <h2 className="text-center text-3xl pb-5">{title}</h2>
       <div className="flex flex-col gap-10 justify-center items-center">
         {data.map((object, index) => (
           <section
-            className="w-full flex flex-col gap-2 md:gap-5 md:flex-row"
+            className={`w-full flex items-center flex-col gap-2 md:gap-5 ${
+              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            }`}
             key={index}>
+            {" "}
             <div className="w-6/6 md:w-3/6 flex justify-center">
               <Carousel
                 className="w-full"
@@ -30,11 +33,11 @@ export default function AllArticles({ data, title, imagePath }) {
                 <CarouselContent>
                   {object.data.fotos.map((foto, fotoIndex) => (
                     <CarouselItem key={fotoIndex}>
-                      <div className="max-h-full overflow-hidden">
+                      <div className="max-h-full overflow-hidden ">
                         <img
                           src={`${imagePath}/${foto}`}
                           alt={`Imagen de ${object.data.nombre} de la fecha ${object.data.fecha}`}
-                          className="object-fill"
+                          className="object-fill rounded-lg"
                         />
                       </div>
                     </CarouselItem>

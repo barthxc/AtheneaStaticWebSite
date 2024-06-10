@@ -1,0 +1,91 @@
+---
+
+---
+
+<header class="bg-white shadow-md">
+  <nav class="flex items-center justify-between p-4">
+    <div class="flex justify-between items-center w-full md:hidden">
+      <a
+        href="/"
+        class="block transform hover:rotate-3 transition duration-300">
+        <img
+          src="/public/Logo.webp"
+          width="50"
+          alt="Logo"
+          class="rounded-lg object-contain object-center"
+        />
+      </a>
+      <button id="menu-toggle" class="focus:outline-none">
+        <svg
+          class="w-8 h-8 text-gray-700"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="hidden md:flex items-center justify-around w-full text-xl sm:text-3xl md:text-3xl">
+      <a
+        href="/about/"
+        class="hover:text-gray-700 transform hover:scale-105 transition duration-300"
+        >Nosotros</a
+      >
+      <a
+        href="/events/"
+        class="hover:text-gray-700 transform hover:scale-105 transition duration-300"
+        >Eventos</a
+      >
+      <a
+        href="/"
+        class="block transform hover:rotate-3 transition duration-300">
+        <img
+          src="/public/Logo.webp"
+          width="80"
+          alt="Logo"
+          class="rounded-lg object-contain object-center"
+        />
+      </a>
+      <a
+        href="/contact/"
+        class="hover:text-gray-700 transform hover:scale-105 transition duration-300"
+        >Contacto</a
+      >
+      <a
+        href="#"
+        class="hover:text-gray-700 transform hover:scale-105 transition duration-300"
+        >Donar</a
+      >
+    </div>
+  </nav>
+  <div
+    id="dropdown-menu"
+    class="dropdown-menu md:hidden flex flex-col items-center text-xl bg-white shadow-md">
+    <a href="/about/" class="w-full text-center py-2 hover:bg-gray-200"
+      >Nosotros</a
+    >
+    <a href="/events/" class="w-full text-center py-2 hover:bg-gray-200"
+      >Eventos</a
+    >
+    <a href="/contact/" class="w-full text-center py-2 hover:bg-gray-200"
+      >Contacto</a
+    >
+    <a href="#" class="w-full text-center py-2 hover:bg-gray-200">Donar</a>
+  </div>
+</header>
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    var menu = document.getElementById("dropdown-menu");
+    if (menu.style.display === "none" || menu.style.display === "") {
+      menu.style.display = "flex";
+    } else {
+      menu.style.display = "none";
+    }
+  });
+</script>

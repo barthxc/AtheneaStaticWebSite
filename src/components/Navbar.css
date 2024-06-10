@@ -1,0 +1,75 @@
+.dropdown_menu {
+  display: none; /*No se ven pantalla grande mayor 768px*/
+  position: absolute;
+  right: 2rem;
+  top: 100px;
+  height: 0;
+  width: 300px;
+  background: rgba(12, 61, 151, 0.509);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+
+.dropdown_menu.open {
+  height: 220px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #e6e6e6;
+  border-radius: 20px;
+  font-size: 2em;
+}
+
+.dropdown_menu li a {
+  text-decoration: none;
+  color: #e6e6e6;
+  border-radius: 20px;
+}
+
+.dropdown_menu li a:hover,
+.dropdown_menu li a.active {
+  color: #141934;
+  width: 100%;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  /*BOTON Y NOMBRE DEL CENTRO*/
+  .dropdown_menu {
+    width: unset;
+  }
+
+  /*Botón de menú - pantalla pequeña*/
+  nav .toggle_btn {
+    display: block;
+    position: absolute;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background-image: url("/public/assets/WheelChair-close.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  nav .toggle_btn.open {
+    background-image: url("/public/assets/WheelChair-open.svg");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}

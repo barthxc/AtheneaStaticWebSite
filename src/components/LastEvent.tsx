@@ -13,7 +13,7 @@ export default function LastEvent({ data, title, imagePath, route }) {
       <a href={route}>
         <h2 className="text-center text-3xl pb-5 hover:underline">{title}</h2>
       </a>
-      <div className="flex flex-col gap-5 items-center lg:flex-row md:gap-5">
+      <div className="flex flex-col gap-5 items-center lg:flex-row md:gap-5 ">
         {lastThreeData.map((object, index) => (
           <article className="w-full max-w-3xl" key={index}>
             <Carousel
@@ -30,7 +30,7 @@ export default function LastEvent({ data, title, imagePath, route }) {
                     <img
                       src={`${imagePath}/${foto}`}
                       alt={`Imagen del Evento ${object.data.nombre} de la fecha ${object.data.fecha}`}
-                      className="object-fill w-full h-96"
+                      className="object-fill w-full h-96 rounded-lg"
                     />
                   </CarouselItem>
                 ))}
