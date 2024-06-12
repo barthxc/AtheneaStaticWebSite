@@ -38,6 +38,7 @@ export default function AllArticles({ data, title, imagePath }) {
                           src={`${imagePath}/${foto}`}
                           alt={`Imagen de ${object.data.nombre} de la fecha ${object.data.fecha}`}
                           className="object-fill rounded-lg"
+                          loading="lazy"
                         />
                       </div>
                     </CarouselItem>

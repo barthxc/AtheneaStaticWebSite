@@ -31,6 +31,7 @@ export default function LastEvent({ data, title, imagePath, route }) {
                       src={`${imagePath}/${foto}`}
                       alt={`Imagen del Evento ${object.data.nombre} de la fecha ${object.data.fecha}`}
                       className="object-fill w-full h-96 rounded-lg"
+                      loading="lazy"
                     />
                   </CarouselItem>
                 ))}

@@ -33,6 +33,7 @@ export default function AlliedCompanies({ data, imagePath }) {
                   src={`${imagePath}/${object.company.foto}`}
                   alt={`Logo de ${object.company.nombre}`}
                   className="object-contain h-32"
+                  loading="lazy"
                 />
               </div>
             </CarouselItem>
