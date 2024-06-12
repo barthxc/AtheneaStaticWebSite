@@ -6,10 +6,10 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-export default function MainCarousel() {
+export default function MainCarousel({ data, imagePath }) {
   return (
     <>
-      <h1 className=" text-4xl text-center p-10">
+      <h1 className="text-4xl text-center p-10">
         Asociación de Discapacitados Athenea Sin Ánimo de Lucro
       </h1>
       <Carousel
@@ -21,15 +21,16 @@ export default function MainCarousel() {
           }),
         ]}>
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {data.map((image, index) => (
             <CarouselItem key={index}>
               <div className="p-0">
                 <Card>
                   <CardContent className="p-0">
                     <img
-                      src="images/carousel1.png"
-                      alt=""
-                      className="w-full max-h-96 object-fill"
+                      src={`${imagePath}/${image}`}
+                      alt={`Imagen de ${image}`}
+                      className="w-full h-[36rem] object-cover"
+                      loading="lazy"
                     />
                   </CardContent>
                 </Card>

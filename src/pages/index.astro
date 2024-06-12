@@ -6,10 +6,11 @@ import AlliedCompanies from "@/components/AlliedCompanies";
 import { alliedCompaniesData } from "@/data/alliedCompanies";
 import { eventData } from "@/data/eventData";
 import { newsData } from "@/data/newsData";
+import { mainData } from "@/data/mainData";
 ---
 
 <Layout>
-  <MainCarousel client:load />
+  <MainCarousel data={mainData} imagePath={"images/mainImages"} client:load />
   <LastEvent
     data={eventData}
     title={"Últimos Eventos"}
