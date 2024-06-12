@@ -17,7 +17,7 @@ const Menu = () => {
             href="/"
             className="block transform hover:rotate-3 transition duration-300">
             <img
-              src="/Logo.webp"
+              src="/Logo.png"
               width="50"
               alt="Logo"
               className="rounded-lg object-contain object-center"
