@@ -33,6 +33,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --font-family-sans: "Montserrat", sans-serif; /* Establece la fuente predeterminada para el cuerpo del documento */
   }
 
   .dark {
@@ -71,6 +73,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* Aplica la fuente predeterminada */
+    font-family: var(
+      --font-family-sans
+    ); /* Usa la variable CSS para establecer la fuente */
   }
 }

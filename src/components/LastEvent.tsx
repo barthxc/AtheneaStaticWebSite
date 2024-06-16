@@ -10,9 +10,12 @@ export default function LastEvent({ data, title, imagePath, route }) {
 
   return (
     <section className="py-8 px-2">
-      <a href={route}>
-        <h2 className="text-center text-3xl pb-5 hover:underline">{title}</h2>
-      </a>
+      <div className="flex flex-col md:flex-row  justify-around items-center">
+        <h2 className="text-center text-3xl pb-2 font-bold">{title}</h2>
+        <a className="text-center text-3xl pb-2 hover:underline" href={route}>
+          Ver más...
+        </a>
+      </div>
       <div className="flex flex-col gap-5 items-center lg:flex-row md:gap-5 ">
         {lastThreeData.map((object, index) => (
           <article className="w-full max-w-3xl" key={index}>
@@ -38,8 +41,8 @@ export default function LastEvent({ data, title, imagePath, route }) {
               </CarouselContent>
             </Carousel>
             <div className="flex justify-around">
-              <p className="text-center mt-2">{object.data.nombre}</p>
-              <p className="text-center mt-2">{object.data.fecha}</p>
+              <p className="text-center mt-2 text-xl">{object.data.nombre}</p>
+              <p className="text-center mt-2 text-xl">{object.data.fecha}</p>
             </div>
           </article>
         ))}

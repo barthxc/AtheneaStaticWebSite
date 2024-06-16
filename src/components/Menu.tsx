@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CalendarEvents from "./CalendarEvents";
 
 import "./Navbar.css";
 
@@ -11,18 +12,21 @@ const Menu = () => {
 
   return (
     <header className="shadow-md">
-      <nav className="flex items-center justify-between p-4 h-20 md:h-32">
+      <nav className="flex items-center justify-between p-4 h-20 md:h-32 font-bold">
         <div className="flex justify-between items-center w-full md:hidden">
-          <a
-            href="/"
-            className="block transform hover:rotate-3 transition duration-300">
-            <img
-              src="/Logo.png"
-              width="50"
-              alt="Logo"
-              className="rounded-lg object-contain object-center"
-            />
-          </a>
+          <div className="flex flex-row items-end gap-10">
+            <a
+              href="/"
+              className="block transform hover:rotate-3 transition duration-300">
+              <img
+                src="/Logo.png"
+                width="50"
+                alt="Logo"
+                className="rounded-lg object-contain object-center"
+              />
+            </a>
+            <CalendarEvents />
+          </div>
           <button
             className={`toggle_btn ${isOpen ? "open" : ""}`}
             onClick={toggleMenu}></button>
@@ -33,11 +37,7 @@ const Menu = () => {
             className="hover:text-gray-700 transform hover:scale-105 transition duration-300">
             Nosotros
           </a>
-          <a
-            href="/events/"
-            className="hover:text-gray-700 transform hover:scale-105 transition duration-300">
-            Eventos
-          </a>
+          <CalendarEvents />
           <a
             href="/"
             className="block transform hover:rotate-3 transition duration-300">

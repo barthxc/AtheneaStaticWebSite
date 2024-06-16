@@ -8,7 +8,7 @@ import {
 export default function AllArticles({ data, title, imagePath }) {
   return (
     <div className="py-8 px-4 ">
-      <h2 className="text-center text-3xl pb-5">{title}</h2>
+      <h2 className="text-center text-4xl pb-5 font-bold">{title}</h2>
       <div className="flex flex-col gap-10 justify-center items-center">
         {data.map((object, index) => (
           <section
@@ -16,7 +16,6 @@ export default function AllArticles({ data, title, imagePath }) {
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
             key={index}>
-            {" "}
             <div className="w-6/6 md:w-3/6 flex justify-center">
               <Carousel
                 className="w-full"
@@ -29,7 +28,9 @@ export default function AllArticles({ data, title, imagePath }) {
                     delay: 10000,
                   }),
                 ]}>
-                <p>{object.data.nombre + " - " + object.data.fecha}</p>
+                <p className="text-xl">
+                  {object.data.nombre + " - " + object.data.fecha}
+                </p>
                 <CarouselContent>
                   {object.data.fotos.map((foto, fotoIndex) => (
                     <CarouselItem key={fotoIndex}>
@@ -47,7 +48,7 @@ export default function AllArticles({ data, title, imagePath }) {
               </Carousel>
             </div>
             <article className="w-6/6 md:w-3/6 flex flex-col justify-center items-center">
-              <p className="text-center mt-2 h-full pt-5">
+              <p className="text-center mt-2 h-full pt-5 text-xl">
                 {object.data.descripcion}
               </p>
             </article>

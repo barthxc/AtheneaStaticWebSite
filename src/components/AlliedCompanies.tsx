@@ -39,8 +39,8 @@ export default function AlliedCompanies({ data, imagePath }) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden lg:block" />
-        <CarouselNext className="hidden lg:block" />
+        <CarouselPrevious className="hidden lg:block " />
+        <CarouselNext className="hidden lg:block " />
       </Carousel>
     </section>
   );
